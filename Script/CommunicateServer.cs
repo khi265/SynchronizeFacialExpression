@@ -11,6 +11,8 @@ public class CommunicateServer : MonoBehaviour {
         SS
     }
 
+    public static string EmotionStatus;
+
     private string result;
     
     string url = "http://localhost:5000/hello";
@@ -33,6 +35,7 @@ public class CommunicateServer : MonoBehaviour {
             // 結果をテキストとして表示します
             Debug.Log(dev_res);
             result = dev_res;
+            EmotionStatus = result;
             call(result);
         }
     }

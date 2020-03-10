@@ -45,6 +45,7 @@ public sealed class AvatarFER : MonoBehaviour
         }else{
             emotionText = webRequest.downloadHandler.text;
             Debug.Log("post:"+emotionText);
+            if(CommunicateServer.EmotionStatus == "happy")emotionText = "happy";
             _emoText.ShowFE(emotionText);
         }
     }
